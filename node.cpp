@@ -1,17 +1,11 @@
-#include <iostream>
-#include <vector>
+#include "node.h"
 
-template <typename T>
-class Node {
-  public:
-    Node(double alpha) {
-      this->alpha = alpha;
-    }
+Node::Node(double alpha) { this->alpha = alpha; }
 
-    void fit(std::vector<double> x) {
-      return;
-    }
+void Node::fit(NodeInput node_input) {}
 
-  private:
-    double alpha;
-};
+NodeInput::NodeInput(std::vector<std::vector<double>> x,
+                     std::vector<double> y) {
+  this->x = x;
+  this->y = y;
+}
